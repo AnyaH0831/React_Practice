@@ -2,7 +2,7 @@
 //     const blogs = props.blogs;
 // }
 
-export default function BlogList({blogs,title}) {
+export default function BlogList({blogs,title,handleDelete}) {
     // const blogs = props.blogs;
     // const title = props.title;
 
@@ -13,6 +13,7 @@ export default function BlogList({blogs,title}) {
                     <div className="blog-preview" key={blog.id}>
                         <h2>{blog.title}</h2>
                         <p>Written By {blog.author}</p>
+                        <button onClick={() => handleDelete(blog.id)}>delete blog</button>
                     </div>
             ))}
         </div>
